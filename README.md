@@ -1,3 +1,6 @@
+# ESP32-WROVER port
+Porting this to work with ESP32-WROVER. Minor changes to platformio.ini to remove ESP32-C3 Super Mini specific flags. Minor change to config.h change pins that conflict with flash memory.
+
 # Plane Radar
 
 <img width="800" height="450" alt="plane-radar" src="https://github.com/user-attachments/assets/716d0992-dab8-47ba-8f1a-2aec7f607419" />
@@ -133,16 +136,16 @@ src/
 
 ## Wiring (GC9A01 ↔ ESP32-C3 Super Mini)
 
-| Display | ESP32-C3 |
+| Display | ESP32-WROVER |
 |---------|----------|
 | VCC | 3V3 |
 | GND | GND |
 | RST | GPIO **0** |
 | CS | GPIO **1** |
-| DC | GPIO **10** |
+| DC | GPIO **15** |
 | SDA (MOSI) | GPIO **3** |
 | SCL (SCLK) | GPIO **4** |
-| BOOT (user) | GPIO **9** |
+| BOOT (user) | GPIO **21** |
 
 ## Build
 
@@ -151,9 +154,8 @@ pio run -t upload
 pio device monitor
 ```
 
-- PlatformIO env: **`supermini`**
+- PlatformIO env: **`espressif32`**
 - Serial: **115200** baud
-- USB CDC on boot enabled in `platformio.ini` for the Super Mini
 
 ### Web-flashable release image
 

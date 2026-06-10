@@ -63,6 +63,10 @@ void fetchAndDrawAircraft() {
 }  // namespace
 
 void setup() {
+
+  // underclock because battery
+  setCpuFrequencyMhz(80);
+
   Serial.begin(115200);
   delay(500);
   Serial.println();

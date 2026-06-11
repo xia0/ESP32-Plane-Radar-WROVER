@@ -1,5 +1,5 @@
-# ESP32-WROVER port
-Porting this to work with ESP32-WROVER. Minor changes to platformio.ini to remove ESP32-C3 Super Mini specific flags. Minor change to config.h change pins that conflict with flash memory.
+# ESP32-DevKitC V4 port
+Porting this to work with ESP32-DevKitC V4. Mine is a WROVER variant but should work with WROOM too. Minor changes to platformio.ini to remove ESP32-C3 Super Mini specific flags. Minor change to config.h change pins that conflict with flash memory. Underclocked CPU to 80MHz to help with struggling LDO on DevKitC V4 board. See below for modified wiring.
 
 # Plane Radar
 
